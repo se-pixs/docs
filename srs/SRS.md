@@ -248,11 +248,10 @@ Text
 
 ### 3.9 Interfaces
 
-Text
-
 #### 3.9.1 User Interfaces
 
-Text
+There is only a single interface providing all of the listed functionalities of the PiXR webapp.
+The user is able to choose the desired functionality and is able to enter corresponding parameters i.o. to use it.
 
 #### 3.9.2 Hardware Interfaces
 
@@ -260,23 +259,23 @@ Text
 
 #### 3.9.3 Software Interfaces
 
-Text
+The webapp will be available in a variety of common used web-browsers (e.g. _Google Chrome_, _Firefox_, _Opera_, _Safari_, etc.)
 
 #### 3.9.4 Communication Interfaces
 
-Text
+The server and client will transfer data using the http protocol.
 
 ### 3.10 Licensing Requirements
 
-Text
+No parts of the software require additional licensing.
 
 ### 3.11 Legal, Copyright, and Other Notices
 
-Text
+The PiXR logo is licensed to be used by the PiXR application only. We do not take responsibilty for any incorrect data or errors in the application that may occur while using the PiXR application.
 
 ### 3.12 Applicable Standards
 
-Text
+The development will follow the common clean code standards and naming conventions. The conventions will be updated as soon as they have been discussed in our team.
 
 ## 4. Supporting Information
 
