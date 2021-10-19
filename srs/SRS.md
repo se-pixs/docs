@@ -112,15 +112,35 @@ The following chapter provides an overview of this project with vision and overa
 
 ### 2.1 Vision
 
-Text
+The idea for this project is a result of missing tools in these fields of image manipulation. We wanted to build something which we could use ourselves. As it is sometimes laborious to resize images or convert them to other formats, we decided to build an own tool for common problems we had. This tool should be easy to use compared to other products. In the end, this application is a collection of problem solvers for the daily life when dealing with small image manipulations. Additionally, the goal of this project is to provide a software that's easily adaptable and where you can add new features quickly.
 
 ### 2.2 Use Case Diagram
 
-Text
+![OUCD](./../ucd/ucd.drawio.svg)
 
 ### 2.3 Technology Stack
 
-Text
+The technologies we use are:
+
+Backend:
+
+- Django with Python
+- Anaconda as package manage
+
+Frontend:
+
+- ReactJS with Typescript
+- Bootstrap
+- SASS
+
+IDE:
+
+- Visual Studio Code
+
+Project Management:
+
+- YouTrack
+- GitHub
 
 ## 3. Specific Requirements
 
