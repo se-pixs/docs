@@ -59,23 +59,54 @@
 
 ### 1.1 Purpose
 
-Text
+This Software Requirements Specification (SRS) describes all specifications for the application PiXS. It includes an overview about this project and its vision, detailed information about the planned features and boundary conditions of the development process.
 
 ### 1.2 Scope
 
-Text
+The project is going to be realized as a web application (webapp).
+Actors of this App can only be users. There are no additional actors.
+The main idea of this project is to manipulate images in certain ways.
+Planned features/manipulations are:
+
+- resizing image:
+  Adjusting an image's height and width to values given by the user.
+- compressing images:
+  Reducing an image's file size by implementing a lossy compression algorithm.
+- split landscape photo into 1080 x 1080 Instagram format:
+  A given Image in landscape format is split horizontally into Images with 1080 Pixels in width. The hight of the original image is reduced to 1080 Pixels. The output Images can be posted on Instagram as swipe throught.
+- converting to jpeg/png:
+  This converts a image to `JPEG` or `PNG` format. This works bidirectional.
+- converting images to low poly art:
+  This generates a low poly art out of a given image.
+- convertint images to pixel art:
+  This generates a pixel art out of a given image.
+- insert meme text onto image:
+  Add a subtitle to an image in a fast way. Hereby, the text is written in the `Impact` font.
+- scale up images:
+  Uses AI to increase a image's resolution.
 
 ### 1.3 Definitions, Acronyms and Abbreviations
 
-Text
+| Abbrevation | Explanation                         |
+| ----------- | ----------------------------------- |
+| SRS         | Software Requirements Specification |
+| UC          | Use Case                            |
+| n/a         | not applicable                      |
+| tbd         | to be determined                    |
+| UCD         | Use Case Diagram                    |
+| webapp      | Web Application                     |
 
 ### 1.4 References
 
-Text
+| Title                                                                                                         |    Date    | Publishing organization |
+| ------------------------------------------------------------------------------------------------------------- | :--------: | ----------------------- |
+| [Common Playground Blog](http://commonplayground.wordpress.com)                                               | 19.10.2021 | PiXS Team               |
+| [GitHub](https://github.com/se-pixs)                                                                          | 19.10.2021 | PiXS Team               |
+| [SRS Template](https://github.com/nilskre/CommonPlayground/blob/pm/docs/SoftwareRequirementsSpecification.md) | 18.10.2018 | Common Playground Team  |
 
 ### 1.5 Overview
 
-Text
+The following chapter provides an overview of this project with vision and overall UCD. The third chapter (Requirements Specification) delivers more details about the specific requirements in terms of functionality, usability and design parameters. Finally there is a chapter with supporting information.
 
 ## 2. Overall Description
 
@@ -249,4 +280,10 @@ Text
 
 ## 4. Supporting Information
 
-Text
+For any further information you can contact the PiXS team or check our [PiXS Blog](https://seproject9463912.wordpress.com/). The team members are:
+
+- Fabian Albrecht
+- Paul Ehrhard
+- Tobias Kreuß
+- Tobias Krüger
+- Luca Müller
