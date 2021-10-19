@@ -264,7 +264,7 @@ Text
 
 #### 3.9.1 User Interfaces
 
-There is only a single interface providing all of the listed functionalities of the PiXR webapp.
+There is only a single interface providing all of the listed functionalities of the PiXS webapp.
 The user is able to choose the desired functionality and is able to enter corresponding parameters i.o. to use it.
 
 #### 3.9.2 Hardware Interfaces
@@ -285,7 +285,7 @@ No parts of the software require additional licensing.
 
 ### 3.11 Legal, Copyright, and Other Notices
 
-The PiXR logo is licensed to be used by the PiXR application only. We do not take responsibilty for any incorrect data or errors in the application that may occur while using the PiXR application.
+The PiXS logo is licensed to be used by the PiXS application only. We do not take responsibilty for any incorrect data or errors in the application that may occur while using the PiXS application.
 
 ### 3.12 Applicable Standards
 
