@@ -31,7 +31,7 @@
       - [3.1.13 Banning users and deleting posts](#3113-banning-users-and-deleting-posts)
     - [3.2 Usability](#32-usability)
       - [3.2.1 No training time needed](#321-no-training-time-needed)
-      - [3.2.2 Familiar Feeling](#322-familiar-feeling)
+      - [3.2.2 Tidy and minimalistic design](#322-tidy-and-minimalistic-design)
     - [3.3 Reliability](#33-reliability)
       - [3.3.1 Availability](#331-availability)
       - [3.3.2 Defect Rate](#332-defect-rate)
@@ -204,55 +204,49 @@ Text
 
 ### 3.2 Usability
 
-Text
+We plan on designing the user interface as intuitive and self explanatory to make the user feel comfortable as possible using the app either on mobile or desktop devices. Though tooltips will be available in the user interface, the description of all tuneable parameters should be self explanatory.
 
 #### 3.2.1 No training time needed
 
-Text
+As our application is planned as webapp no local installation is needed. After opening our webapp in a browser every user is able to use all features without any explanation or help.
 
-#### 3.2.2 Familiar Feeling
+#### 3.2.2 Tidy and minimalistic design
 
-Text
+We want to implement our app with a tidy and minimalistic design. This way the user is able to interact in familiar ways with the app with only minimal prior knowledge of the app.
 
 ### 3.3 Reliability
 
-Text
-
 #### 3.3.1 Availability
 
-Text
+The server shall be available 99% of the time. Downtimes are only expected, while a new release is rolled out. However these downtimes should only be lasting from few seconds to few minutes. Further downtimes are dependet from the the cloud provider and range between 98 and 99,9%.
 
 #### 3.3.2 Defect Rate
 
-Text
+As we are not persisting any data beyond the definition of the functionalities we should not experience any loss of data.
 
 ### 3.4 Perfomance
 
-Text
-
 #### 3.4.1 Capacity
 
-Text
+Because all functions are executed by the server, more users require more server capacities. Nevertheless the asynchronous execution of requests allow for easy scalability of the server landscape.
 
 #### 3.4.2 Storage
 
-Text
+As we are not persisting any data beyond the definition of the functionalities there is no need for storage capacity.
 
 #### 3.4.3 App perfomance / Response time
 
-Text
+The response time depends on the requested function. Some functionalities require more time intensive calculations than others. The response time also rises with the size of the images. We aim to keep the response time as low as possible but also provide the user information on the current progress (e.g. estimated time). This will make the user experience much better.
 
 ### 3.5 Supportability
 
-Text
-
 #### 3.5.1 Coding Standards
 
-Text
+We are going to write the code by using all of the most common clean code standards. For example we will name our variables and methods by their functionalities. This will keep the code easy to read by everyone and make further developement much easier.
 
 #### 3.5.2 Testing Strategy
 
-Text
+The application will have a high test coverage and all image manipulation functionalities and edge cases should be tested. Further mistakes in the implementation will be discovered instantly and it will be easy to locate the error.
 
 ### 3.6 Design Constraints
 
