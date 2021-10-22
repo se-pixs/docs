@@ -16,19 +16,14 @@
     - [2.3 Technology Stack](#23-technology-stack)
   - [3. Specific Requirements](#3-specific-requirements)
     - [3.1 Functionality](#31-functionality)
-      - [3.1.1 Posting a session](#311-posting-a-session)
-      - [3.1.2 Getting an overview](#312-getting-an-overview)
-      - [3.1.3 Creating an account](#313-creating-an-account)
-      - [3.1.4 Logging in](#314-logging-in)
-      - [3.1.5 Logging out](#315-logging-out)
-      - [3.1.6 Joining a session](#316-joining-a-session)
-      - [3.1.7 Keeping track of your sessions](#317-keeping-track-of-your-sessions)
-      - [3.1.8 Leaving a session](#318-leaving-a-session)
-      - [3.1.9 Finding a session](#319-finding-a-session)
-      - [3.1.10 Getting in touch](#3110-getting-in-touch)
-      - [3.1.11 Presenting yourself and checking out others](#3111-presenting-yourself-and-checking-out-others)
-      - [3.1.12 Reporting users and managing friends](#3112-reporting-users-and-managing-friends)
-      - [3.1.13 Banning users and deleting posts](#3113-banning-users-and-deleting-posts)
+      - [3.1.1 Image resizing](#311-image-resizing)
+      - [3.1.2 Image file size reduction](#312-image-file-size-reduction)
+      - [3.2.3 split landscape photo into 1080 x 1080 Instagram resolution](#323-split-landscape-photo-into-1080-x-1080-instagram-resolution)
+      - [3.1.4 image filetype conversion betwenn png/jpeg](#314-image-filetype-conversion-betwenn-pngjpeg)
+      - [3.1.5 Converting Images to low poly](#315-converting-images-to-low-poly)
+      - [3.1.6 Converting images to pixelart](#316-converting-images-to-pixelart)
+      - [3.1.7 Memetext insertion](#317-memetext-insertion)
+      - [3.1.8 Image up & down scaling](#318-image-up--down-scaling)
     - [3.2 Usability](#32-usability)
       - [3.2.1 No training time needed](#321-no-training-time-needed)
       - [3.2.2 Tidy and minimalistic design](#322-tidy-and-minimalistic-design)
@@ -144,22 +139,21 @@ Project Management:
 
 ## 3. Specific Requirements
 
-Text
-
 ### 3.1 Functionality
 
 This section explains the diffrent use cases of our application.
 We plan to implement:
+
 - 3.1 Image resizing
--
-For each of the use cases the user has to upload an image of his choice.
+- For each of the use cases the user has to upload an image of his choice.
+
 #### 3.1.1 Image resizing
 
 With this feature a user can chage the resolution of a given image. Two inputfields, for higth and width, define the
 target resolution. After these are filled in, a frame, representing the entered values will be displayed on top of the
 upladed image. By positionig this frame the user has the ability to adjust which area will be the output, as a change of
 the resolution might require image parts to be cut off as a consequence of a changed aspect ratio.
-Finally the inputs are confirmed by the user and the processed image is offerd as a download. 
+Finally the inputs are confirmed by the user and the processed image is offerd as a download.
 
 #### 3.1.2 Image file size reduction
 
@@ -167,7 +161,6 @@ To fit with the filesize requirements on diffrent occations when it comes to upl
 by making use of lossy file compression. The user adjustes a slider in between the values of zero and onehundred.
 The provided value is the target filesize in percent relative to the original filesize. The user confirms the selectet
 percentage. Then the processed image is offered as a download.
-
 
 #### 3.2.3 split landscape photo into 1080 x 1080 Instagram resolution
 
@@ -179,12 +172,10 @@ To ensure importend parts of the image are not cut off, the hight is halved. The
 addet for the cut at the top and 540 pixels subtracted for the cut at the bottom of the image.
 Then the width is divided by 1080.
 After the outcome is rouned the calculated value is mutiplied with 1080. The final result is the amount of pixels in width the original picture is reduced to in order to be split up in smaller images with the desired width of 1080 pixels. The division of
-the final result by 1080 produces the amout of necessary smaller images. Finally the image is sliced horizontally into images 
+the final result by 1080 produces the amout of necessary smaller images. Finally the image is sliced horizontally into images
 with a width of 1080 pixels.
 
 After the image is processed the tailored images are zippped and the archive is offered as a download.
-
-
 
 #### 3.1.4 image filetype conversion betwenn png/jpeg
 
@@ -201,8 +192,6 @@ and the image is offered as a download.
 
 #### 3.1.6 Converting images to pixelart
 
-
-
 #### 3.1.7 Memetext insertion
 
 It is very common to add text in the font "Impact" and therefore creating a meme. With this feature the user can
@@ -211,8 +200,9 @@ the picture can be set by the user. Finally the user confirms by clicking a butt
 
 #### 3.1.8 Image up & down scaling
 
-Text
+Sometimes, you only have an image with a low resolution but you have to use it on your PowerPoint slides. Therefore, you need to increase the resolution so that the picture is also crispy clean on the slides. This is the feature's goal.
 
+However, it might not be implemented. We'll decide to a later point in time whether we want to include it in our product or not.
 
 ### 3.2 Usability
 
