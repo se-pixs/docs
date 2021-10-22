@@ -144,9 +144,16 @@ Project Management:
 This section explains the diffrent use cases of our application.
 We plan to implement:
 
-- 3.1 Image resizing
-  {text}
-- For each of the use cases the user has to upload an image of his choice.
+- 3.1.1 Image resizing
+- 3.1.2 Image file size reduction
+- 3.2.3 split landscape photo into 1080 x 1080 Instagram resolution
+- 3.1.4 image filetype conversion betwenn png/jpeg
+- 3.1.5 Converting Images to low poly
+- 3.1.6 Converting images to pixelart
+- 3.1.7 Memetext insertion
+- 3.1.8 Image up & down scaling
+
+For each of the use cases the user has to upload an image of his choice.
 
 #### 3.1.1 Image resizing
 
@@ -176,7 +183,8 @@ This feature converts an image to low poly art. The user can enter the effect in
 
 #### 3.1.6 Converting images to pixelart
 
-{Text}
+Similar to point 3.1.5 the user enters the effect intensity. The backend processes the input and the user is presented with
+a live preview. After the user decited for a certain setting, he/she/it confirms by clicking a button. The processed Image is offerd as a download.
 
 #### 3.1.7 Memetext insertion
 
