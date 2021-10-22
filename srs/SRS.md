@@ -72,7 +72,7 @@ Planned features/manipulations are:
   Adjusting an image's height and width to values given by the user.
 - compressing images:
   Reducing an image's file size by implementing a lossy compression algorithm.
-- split landscape photo into 1080 x 1080 Instagram format:
+- split landscape photo into 1080 x 1080 Instagram resolution:
   A given Image in landscape format is split horizontally into Images with 1080 Pixels in width. The hight of the original image is reduced to 1080 Pixels. The output Images can be posted on Instagram as swipe throught.
 - converting to jpeg/png:
   This converts a image to `JPEG` or `PNG` format. This works bidirectional.
@@ -148,59 +148,71 @@ Text
 
 ### 3.1 Functionality
 
+This section explains the diffrent use cases of our application.
+We plan to implement:
+- 3.1 Image resizing
+-
+For each of the use cases the user has to upload an image of his choice.
+#### 3.1.1 Image resizing
+
+With this feature a user can chage the resolution of a given image. Two inputfields, for higth and width, define the
+target resolution. After these are filled in, a frame, representing the entered values will be displayed on top of the
+upladed image. By positionig this frame the user has the ability to adjust which area will be the output, as a change of
+the resolution might require image parts to be cut off as a consequence of a changed aspect ratio.
+Finally the inputs are confirmed by the user and the processed image is offerd as a download. 
+
+#### 3.1.2 Image file size reduction
+
+To fit with the filesize requirements on diffrent occations when it comes to uploading images we offer this feature
+by making use of lossy file compression. The user adjustes a slider in between the values of zero and onehundred.
+The provided value is the target filesize in percent relative to the original filesize. The user confirms the selectet
+percentage. Then the processed image is offered as a download.
+
+
+#### 3.2.3 split landscape photo into 1080 x 1080 Instagram resolution
+
+On Instagram you can post multible images at once. Users can then swipe through the diffrent Images. For Pictures with a multiple of 1080 Pixels in width it is possible to split up the image in in smaller images with the resolution of 1080x1080 Pixels.
+When these Images are uploaded in one post a panorama effect is achived.
+
+This feature accepts images with at least 1080 pixels in height and 2160 pixels in width. As the image provided by the user usually has a hight greater then 1080 pixels the hight has to be reduced.
+To ensure importend parts of the image are not cut off, the hight is halved. Then to calculate the desired cutout 540 pixels are
+addet for the cut at the top and 540 pixels subtracted for the cut at the bottom of the image.
+Then the width is divided by 1080.
+After the outcome is rouned the calculated value is mutiplied with 1080. The final result is the amount of pixels in width the original picture is reduced to in order to be split up in smaller images with the desired width of 1080 pixels. The division of
+the final result by 1080 produces the amout of necessary smaller images. Finally the image is sliced horizontally into images 
+with a width of 1080 pixels.
+
+After the image is processed the tailored images are zippped and the archive is offered as a download.
+
+
+
+#### 3.1.4 image filetype conversion betwenn png/jpeg
+
+Png and jpeg are both very popular image formates. However some plattforms only support jpeg or only png.
+To enabel the users an easy conversion between these to formats ths feature implemets the functionality to
+convert a jpeg file to a png file or vice versa. After the conversion took place the processed file is offered
+as a download.
+
+#### 3.1.5 Converting Images to low poly
+
+This feature converts an image to low poly. The user can enter the effect intensity. While the effect intensity is
+adjusted a live preview is displayed. As soon as the settings fit the users desires he/she/it confirms the settings
+and the image is offered as a download.
+
+#### 3.1.6 Converting images to pixelart
+
+
+
+#### 3.1.7 Memetext insertion
+
+It is very common to add text in the font "Impact" and therefore creating a meme. With this feature the user can
+create a textbox in a given picture. The entered text will be displayed in the font impact. The position of the textbox in
+the picture can be set by the user. Finally the user confirms by clicking a button and the processed image is offered as a download.
+
+#### 3.1.8 Image up & down scaling
+
 Text
 
-#### 3.1.1 Posting a session
-
-Text
-
-#### 3.1.2 Getting an overview
-
-Text
-
-#### 3.1.3 Creating an account
-
-Text
-
-#### 3.1.4 Logging in
-
-Text
-
-#### 3.1.5 Logging out
-
-Text
-
-#### 3.1.6 Joining a session
-
-Text
-
-#### 3.1.7 Keeping track of your sessions
-
-Text
-
-#### 3.1.8 Leaving a session
-
-Text
-
-#### 3.1.9 Finding a session
-
-Text
-
-#### 3.1.10 Getting in touch
-
-Text
-
-#### 3.1.11 Presenting yourself and checking out others
-
-Text
-
-#### 3.1.12 Reporting users and managing friends
-
-Text
-
-#### 3.1.13 Banning users and deleting posts
-
-Text
 
 ### 3.2 Usability
 
