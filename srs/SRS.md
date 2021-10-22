@@ -16,19 +16,14 @@
     - [2.3 Technology Stack](#23-technology-stack)
   - [3. Specific Requirements](#3-specific-requirements)
     - [3.1 Functionality](#31-functionality)
-      - [3.1.1 Posting a session](#311-posting-a-session)
-      - [3.1.2 Getting an overview](#312-getting-an-overview)
-      - [3.1.3 Creating an account](#313-creating-an-account)
-      - [3.1.4 Logging in](#314-logging-in)
-      - [3.1.5 Logging out](#315-logging-out)
-      - [3.1.6 Joining a session](#316-joining-a-session)
-      - [3.1.7 Keeping track of your sessions](#317-keeping-track-of-your-sessions)
-      - [3.1.8 Leaving a session](#318-leaving-a-session)
-      - [3.1.9 Finding a session](#319-finding-a-session)
-      - [3.1.10 Getting in touch](#3110-getting-in-touch)
-      - [3.1.11 Presenting yourself and checking out others](#3111-presenting-yourself-and-checking-out-others)
-      - [3.1.12 Reporting users and managing friends](#3112-reporting-users-and-managing-friends)
-      - [3.1.13 Banning users and deleting posts](#3113-banning-users-and-deleting-posts)
+      - [3.1.1 Image resizing](#311-image-resizing)
+      - [3.1.2 Image file size reduction](#312-image-file-size-reduction)
+      - [3.2.3 split landscape photo into 1080 x 1080 Instagram resolution](#323-split-landscape-photo-into-1080-x-1080-instagram-resolution)
+      - [3.1.4 image filetype conversion betwenn png/jpeg](#314-image-filetype-conversion-betwenn-pngjpeg)
+      - [3.1.5 Converting Images to low poly](#315-converting-images-to-low-poly)
+      - [3.1.6 Converting images to pixelart](#316-converting-images-to-pixelart)
+      - [3.1.7 Memetext insertion](#317-memetext-insertion)
+      - [3.1.8 Image up & down scaling](#318-image-up--down-scaling)
     - [3.2 Usability](#32-usability)
       - [3.2.1 No training time needed](#321-no-training-time-needed)
       - [3.2.2 Tidy and minimalistic design](#322-tidy-and-minimalistic-design)
@@ -64,7 +59,7 @@ This Software Requirements Specification (SRS) describes all specifications for 
 ### 1.2 Scope
 
 The project is going to be realized as a web application (webapp).
-Actors of this App can only be users. There are no additional actors.
+Only users can be actors of this app. There are no additional actors.
 The main idea of this project is to manipulate images in certain ways.
 Planned features/manipulations are:
 
@@ -144,111 +139,90 @@ Project Management:
 
 ## 3. Specific Requirements
 
-Text
-
 ### 3.1 Functionality
 
 This section explains the diffrent use cases of our application.
 We plan to implement:
+
 - 3.1 Image resizing
--
-For each of the use cases the user has to upload an image of his choice.
+  {text}
+- For each of the use cases the user has to upload an image of his choice.
+
 #### 3.1.1 Image resizing
 
-With this feature a user can chage the resolution of a given image. Two inputfields, for higth and width, define the
-target resolution. After these are filled in, a frame, representing the entered values will be displayed on top of the
-upladed image. By positionig this frame the user has the ability to adjust which area will be the output, as a change of
-the resolution might require image parts to be cut off as a consequence of a changed aspect ratio.
-Finally the inputs are confirmed by the user and the processed image is offerd as a download. 
+With this feature, a user can change the resolution of a given image. Two input fields, for height and width, define the target resolution. After these are filled in, a frame, representing the entered values, will be displayed on top of the upladed image. By positioning this frame, the user has the ability to adjust which area will be the output, as a change of the resolution might require image parts to be cut off as a consequence of a changed aspect ratio. Finally, the inputs are confirmed by the user and the processed image is offerd as a download.
 
 #### 3.1.2 Image file size reduction
 
-To fit with the filesize requirements on diffrent occations when it comes to uploading images we offer this feature
-by making use of lossy file compression. The user adjustes a slider in between the values of zero and onehundred.
-The provided value is the target filesize in percent relative to the original filesize. The user confirms the selectet
-percentage. Then the processed image is offered as a download.
-
+To fit with the file size requirements on diffrent occations when it comes to uploading images, we offer this feature by making use of lossy file compression. The user adjustes a slider in between the values of zero and one hundred. The provided value is the target file size in percent relative to the original file size. The user confirms the selected percentage. Then the processed image is offered as a download.
 
 #### 3.2.3 split landscape photo into 1080 x 1080 Instagram resolution
 
-On Instagram you can post multible images at once. Users can then swipe through the diffrent Images. For Pictures with a multiple of 1080 Pixels in width it is possible to split up the image in in smaller images with the resolution of 1080x1080 Pixels.
-When these Images are uploaded in one post a panorama effect is achived.
+On Instagram, you can post multiple images at once. Users can then swipe through the different images. For pictures with a multiple of 1080px in width, it is possible to split up the image in in smaller images with the resolution of 1080x1080 px. When these Images are uploaded in one post a panorama effect is achived.
 
-This feature accepts images with at least 1080 pixels in height and 2160 pixels in width. As the image provided by the user usually has a hight greater then 1080 pixels the hight has to be reduced.
-To ensure importend parts of the image are not cut off, the hight is halved. Then to calculate the desired cutout 540 pixels are
-addet for the cut at the top and 540 pixels subtracted for the cut at the bottom of the image.
-Then the width is divided by 1080.
-After the outcome is rouned the calculated value is mutiplied with 1080. The final result is the amount of pixels in width the original picture is reduced to in order to be split up in smaller images with the desired width of 1080 pixels. The division of
-the final result by 1080 produces the amout of necessary smaller images. Finally the image is sliced horizontally into images 
-with a width of 1080 pixels.
+This feature accepts images with at least 1080px in height and 2160px in width. As the image provided by the user usually has a height greater then 1080px, the height has to be reduced. To ensure important parts of the image are not cut off, the height is halved. To calculate the desired cut-out 540px are then added for the cut at the top and 540px subtracted for the cut at the bottom of the image.
+Then the width is divided by 1080. After the outcome is rounded, the calculated value is mutiplied with 1080. The final result is the amount of pixels in width, the original picture is reduced to, in order to be split up in smaller images with the desired width of 1080px. The division of the final result by 1080 produces the amout of necessary smaller images. Finally the image is sliced horizontally into images with a width of 1080px.
 
-After the image is processed the tailored images are zippped and the archive is offered as a download.
-
-
+After the image is processed, the tailored images are zippped and the archive is offered as a download.
 
 #### 3.1.4 image filetype conversion betwenn png/jpeg
 
-Png and jpeg are both very popular image formates. However some plattforms only support jpeg or only png.
-To enabel the users an easy conversion between these to formats ths feature implemets the functionality to
-convert a jpeg file to a png file or vice versa. After the conversion took place the processed file is offered
-as a download.
+`PNG` and `JPEG` are both very popular image formats. However, some platforms only support `JPEG` or only `PNG`.
+To enable the users an easy conversion between these to formats, the feature implements the functionality to convert a `JPEG` file to a `PNG` file or vice versa. After the conversion took place, the processed file is offered as a download.
 
 #### 3.1.5 Converting Images to low poly
 
-This feature converts an image to low poly. The user can enter the effect intensity. While the effect intensity is
-adjusted a live preview is displayed. As soon as the settings fit the users desires he/she/it confirms the settings
-and the image is offered as a download.
+This feature converts an image to low poly art. The user can enter the effect intensity. While the effect intensity is adjusted, a live preview is displayed. As soon as the settings fit the user's desires, he/she/it confirms the settings and the image is offered as a download.
 
 #### 3.1.6 Converting images to pixelart
 
-
+{Text}
 
 #### 3.1.7 Memetext insertion
 
-It is very common to add text in the font "Impact" and therefore creating a meme. With this feature the user can
-create a textbox in a given picture. The entered text will be displayed in the font impact. The position of the textbox in
-the picture can be set by the user. Finally the user confirms by clicking a button and the processed image is offered as a download.
+It is very common to add text in the font "Impact" and, therefore, create a meme. With this feature, the user can create a textbox in a given picture. The entered text will be displayed in the font Impact. The position of the textbox in the picture can be set by the user. Finally, the user confirms by clicking a button and the processed image is offered as a download.
 
 #### 3.1.8 Image up & down scaling
 
-Text
+Sometimes, you only have an image with a low resolution but you have to use it on your PowerPoint slides. Therefore, you need to increase the resolution so that the picture is also crispy clean on the slides. This is the feature's goal.
 
+However, it might not be implemented. We'll decide to a later point in time whether we want to include it in our product or not.
 
 ### 3.2 Usability
 
-We plan on designing the user interface as intuitive and self explanatory to make the user feel comfortable as possible using the app either on mobile or desktop devices. Though tooltips will be available in the user interface, the description of all tuneable parameters should be self explanatory.
+We plan on designing the user interface as intuitive and self explanatory to make the user feel as comfortable as possible using the app either on mobile or desktop devices. Though tooltips will be available in the user interface, the description of all tuneable parameters should be self explanatory.
 
 #### 3.2.1 No training time needed
 
-As our application is planned as webapp no local installation is needed. After opening our webapp in a browser every user is able to use all features without any explanation or help.
+As our application is planned as webapp, no local installation is needed. After opening our webapp in a browser, every user is able to use all features without any explanation or help.
 
 #### 3.2.2 Tidy and minimalistic design
 
-We want to implement our app with a tidy and minimalistic design. This way the user is able to interact in familiar ways with the app with only minimal prior knowledge of the app.
+We want to implement our app with a tidy and minimalistic design. This way the user is able to interact in familiar ways with the app with only minimal prior knowledge of the applicaton.
 
 ### 3.3 Reliability
 
 #### 3.3.1 Availability
 
-The server shall be available 99% of the time. Downtimes are only expected, while a new release is rolled out. However these downtimes should only be lasting from few seconds to few minutes. Further downtimes are dependet from the the cloud provider and range between 98 and 99,9%.
+The server shall be available 99% of the time. Downtimes are only expected, while a new release is rolled out. However, these downtimes should only be lasting from few seconds to few minutes. Further downtimes depend on the cloud provider and range between 98 and 99.9%.
 
 #### 3.3.2 Defect Rate
 
-As we are not persisting any data beyond the definition of the functionalities we should not experience any loss of data.
+As we are not persisting any data beyond the definition of the functionalities, we should not experience any loss of data.
 
 ### 3.4 Perfomance
 
 #### 3.4.1 Capacity
 
-Because all functions are executed by the server, more users require more server capacities. Nevertheless the asynchronous execution of requests allow for easy scalability of the server landscape.
+Because all functions are executed by the server, more users require more server capacities. Nevertheless, the asynchronous execution of requests allow for an easy scalability of the server landscape.
 
 #### 3.4.2 Storage
 
-As we are not persisting any data beyond the definition of the functionalities there is no need for storage capacity.
+As we are not persisting any data beyond the definition of the functionalities, there is no need for storage capacity.
 
 #### 3.4.3 App perfomance / Response time
 
-The response time depends on the requested function. Some functionalities require more time intensive calculations than others. The response time also rises with the size of the images. We aim to keep the response time as low as possible but also provide the user information on the current progress (e.g. estimated time). This will make the user experience much better.
+The response time depends on the requested function. Some functionalities require more time-intensive calculations than others. The response time also rises with the size of the images. We aim to keep the response time as low as possible but also provide the user information on the current progress (e.g. estimated time). This will make the user experience much better.
 
 ### 3.5 Supportability
 
@@ -284,8 +258,7 @@ We don't have any purchased components yet. If there will be purchased component
 
 #### 3.9.1 User Interfaces
 
-There is only a single interface providing all of the listed functionalities of the PiXS webapp.
-The user is able to choose the desired functionality and is able to enter corresponding parameters i.o. to use it.
+There is only a single interface providing all of the listed functionalities of the PiXS webapp. The user is able to choose the desired functionality and can enter corresponding parameters in order to use it.
 
 #### 3.9.2 Hardware Interfaces
 
@@ -297,7 +270,7 @@ The webapp will be available in a variety of common used web-browsers (e.g. _Goo
 
 #### 3.9.4 Communication Interfaces
 
-The server and client will transfer data using the http protocol.
+The server and client will transfer data using the `HTTP` protocol.
 
 ### 3.10 Licensing Requirements
 
