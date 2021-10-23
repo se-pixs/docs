@@ -245,7 +245,7 @@ The application will have a high test coverage and all image manipulation functi
 
 In order to create a modern and easy-to-use design for both the user interface and the architecture of the application, the functionalities are kept as modular as possible.
 
-Since we are programming a web application, we have chosen TypeScript as the programming language for the frontend. For the simple design of the website we use bootstrap and sass. In the backend we will rely on Django with Python and use Anaconda as package manage. The supported platform will be a variety of popular web browsers:
+Since we are programming a web application, we have chosen TypeScript as the programming language for the frontend. For the simple design of the website we use Bootstrap and SASS. In the backend we will rely on Django with Python and use Anaconda as package manager. The supported platform will be a variety of popular web browsers:
 
 - Google Chrome
 - Firefox
@@ -259,7 +259,7 @@ The usage of the app should be as intuitive as possible so it won't need any fur
 
 ### 3.8 Purchased Components
 
-We don't have any purchased components yet. If there will be purchased components in the future we will list them here.
+We don't have any purchased components yet. If there will be purchased components in the future, we will list them here.
 
 ### 3.9 Interfaces
 
