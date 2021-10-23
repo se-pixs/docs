@@ -18,8 +18,8 @@
     - [3.1 Functionality](#31-functionality)
       - [3.1.1 Image resizing](#311-image-resizing)
       - [3.1.2 Image file size reduction](#312-image-file-size-reduction)
-      - [3.2.3 split landscape photo into 1080 x 1080 Instagram resolution](#323-split-landscape-photo-into-1080-x-1080-instagram-resolution)
-      - [3.1.4 image filetype conversion betwenn png/jpeg](#314-image-filetype-conversion-betwenn-pngjpeg)
+      - [3.2.3 Split landscape photo into 1080 x 1080 Instagram resolution](#323-split-landscape-photo-into-1080-x-1080-instagram-resolution)
+      - [3.1.4 Image filetype conversion betwenn png/jpeg](#314-image-filetype-conversion-betwenn-pngjpeg)
       - [3.1.5 Converting Images to low poly](#315-converting-images-to-low-poly)
       - [3.1.6 Converting images to pixelart](#316-converting-images-to-pixelart)
       - [3.1.7 Memetext insertion](#317-memetext-insertion)
@@ -146,8 +146,8 @@ We plan to implement:
 
 - 3.1.1 Image resizing
 - 3.1.2 Image file size reduction
-- 3.2.3 split landscape photo into 1080 x 1080 Instagram resolution
-- 3.1.4 image filetype conversion betwenn png/jpeg
+- 3.2.3 Split landscape photo into 1080 x 1080 Instagram resolution
+- 3.1.4 Image filetype conversion betwenn png/jpeg
 - 3.1.5 Converting Images to low poly
 - 3.1.6 Converting images to pixelart
 - 3.1.7 Memetext insertion
@@ -163,7 +163,7 @@ With this feature, a user can change the resolution of a given image. Two input 
 
 To fit with the file size requirements on diffrent occations when it comes to uploading images, we offer this feature by making use of lossy file compression. The user adjustes a slider in between the values of zero and one hundred. The provided value is the target file size in percent relative to the original file size. The user confirms the selected percentage. Then the processed image is offered as a download.
 
-#### 3.2.3 split landscape photo into 1080 x 1080 Instagram resolution
+#### 3.2.3 Split landscape photo into 1080 x 1080 Instagram resolution
 
 On Instagram, you can post multiple images at once. Users can then swipe through the different images. For pictures with a multiple of 1080px in width, it is possible to split up the image in in smaller images with the resolution of 1080x1080 px. When these Images are uploaded in one post a panorama effect is achived.
 
@@ -172,7 +172,7 @@ Then the width is divided by 1080. After the outcome is rounded, the calculated 
 
 After the image is processed, the tailored images are zippped and the archive is offered as a download.
 
-#### 3.1.4 image filetype conversion betwenn png/jpeg
+#### 3.1.4 Image filetype conversion betwenn png/jpeg
 
 `PNG` and `JPEG` are both very popular image formats. However, some platforms only support `JPEG` or only `PNG`.
 To enable the users an easy conversion between these to formats, the feature implements the functionality to convert a `JPEG` file to a `PNG` file or vice versa. After the conversion took place, the processed file is offered as a download.
@@ -183,8 +183,7 @@ This feature converts an image to low poly art. The user can enter the effect in
 
 #### 3.1.6 Converting images to pixelart
 
-Similar to point 3.1.5 the user enters the effect intensity. The backend processes the input and the user is presented with
-a live preview. After the user decited for a certain setting, he/she/it confirms by clicking a button. The processed Image is offerd as a download.
+Similar to point 3.1.5, the user enters the effect intensity. The backend processes the input and the user is presented a live preview. After the user decited for a certain setting, he/she/it confirms by clicking a button. The processed image is offerd as a download.
 
 #### 3.1.7 Memetext insertion
 
