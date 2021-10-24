@@ -1,8 +1,8 @@
-# Common Playground - Software Requirements Specification
+# PiXS - Software Requirements Specification
 
 ## Table of contents
 
-- [Common Playground - Software Requirements Specification](#common-playground---software-requirements-specification)
+- [PiXS - Software Requirements Specification](#pixs---software-requirements-specification)
   - [Table of contents](#table-of-contents)
   - [1. Introduction](#1-introduction)
     - [1.1 Purpose](#11-purpose)
@@ -95,7 +95,7 @@ Planned features/manipulations are:
 
 | Title                                                                                                         |    Date    | Publishing organization |
 | ------------------------------------------------------------------------------------------------------------- | :--------: | ----------------------- |
-| [Common Playground Blog](http://commonplayground.wordpress.com)                                               | 19.10.2021 | PiXS Team               |
+| [PiXS Blog](https://seproject9463912.wordpress.com/)                                                          | 19.10.2021 | PiXS Team               |
 | [GitHub](https://github.com/se-pixs)                                                                          | 19.10.2021 | PiXS Team               |
 | [SRS Template](https://github.com/nilskre/CommonPlayground/blob/pm/docs/SoftwareRequirementsSpecification.md) | 18.10.2018 | Common Playground Team  |
 
