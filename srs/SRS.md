@@ -152,6 +152,8 @@ We plan to implement:
 - 3.1.6 Converting images to pixelart
 - 3.1.7 Memetext insertion
 - 3.1.8 Image up & down scaling
+- 3.1.9 Upload image file
+- 3.1.10 Download image file(s)
 
 For each of the use cases the user has to upload an image of his choice.
 
@@ -194,6 +196,15 @@ It is very common to add text in the font "Impact" and, therefore, create a meme
 Sometimes, you only have an image with a low resolution but you have to use it on your PowerPoint slides. Therefore, you need to increase the resolution so that the picture is also crispy clean on the slides. This is the feature's goal.
 
 However, it might not be implemented. We'll decide to a later point in time whether we want to include it in our product or not.
+
+#### 3.1.9 Upload image file
+
+Before you are able to manipulate any kind of file (in this case an image), you have to specify it.
+Therefore, the user has to select the corresponding image and upload it to the server. Furthermore, the system has to check if the uploaded file extension is supported (e.g. _.png_, _.jpg_).
+
+#### 3.1.10 Download image file(s)
+
+After having manipulated the image, the user might want to save it to their machine. That is why it is required to allow the user to download the according file(s). The user may choose the desired file format (_.png_ or _.jpg_, for example).
 
 ### 3.2 Usability
 
