@@ -19,7 +19,7 @@
       - [3.1.1 Image resizing](#311-image-resizing)
       - [3.1.2 Image file size reduction](#312-image-file-size-reduction)
       - [3.2.3 Split landscape photo into 1080 x 1080 Instagram resolution](#323-split-landscape-photo-into-1080-x-1080-instagram-resolution)
-      - [3.1.4 Image filetype conversion betwenn png/jpeg](#314-image-filetype-conversion-betwenn-pngjpeg)
+      - [3.1.4 Image filetype conversion between png/jpeg](#314-image-filetype-conversion-between-pngjpeg)
       - [3.1.5 Converting Images to low poly](#315-converting-images-to-low-poly)
       - [3.1.6 Converting images to pixelart](#316-converting-images-to-pixelart)
       - [3.1.7 Memetext insertion](#317-memetext-insertion)
@@ -30,10 +30,10 @@
     - [3.3 Reliability](#33-reliability)
       - [3.3.1 Availability](#331-availability)
       - [3.3.2 Defect Rate](#332-defect-rate)
-    - [3.4 Perfomance](#34-perfomance)
+    - [3.4 performance](#34-performance)
       - [3.4.1 Capacity](#341-capacity)
       - [3.4.2 Storage](#342-storage)
-      - [3.4.3 App perfomance / Response time](#343-app-perfomance--response-time)
+      - [3.4.3 App performance / Response time](#343-app-performance--response-time)
     - [3.5 Supportability](#35-supportability)
       - [3.5.1 Coding Standards](#351-coding-standards)
       - [3.5.2 Testing Strategy](#352-testing-strategy)
@@ -68,12 +68,12 @@ Planned features/manipulations are:
 - compressing images:
   Reducing an image's file size by implementing a lossy compression algorithm.
 - split landscape photo into 1080 x 1080 Instagram resolution:
-  A given Image in landscape format is split horizontally into Images with 1080 Pixels in width. The hight of the original image is reduced to 1080 Pixels. The output Images can be posted on Instagram as swipe throught.
+  A given Image in landscape format is split horizontally into Images with 1080 Pixels in width. The height of the original image is reduced to 1080 Pixels. The output Images can be posted on Instagram as swipe through.
 - converting to jpeg/png:
   This converts a image to `JPEG` or `PNG` format. This works bidirectional.
 - converting images to low poly art:
   This generates a low poly art out of a given image.
-- convertint images to pixel art:
+- converting images to pixel art:
   This generates a pixel art out of a given image.
 - insert meme text onto image:
   Add a subtitle to an image in a fast way. Hereby, the text is written in the `Impact` font.
@@ -141,27 +141,29 @@ Project Management:
 
 ### 3.1 Functionality
 
-This section explains the diffrent use cases of our application.
+This section explains the different use cases of our application.
 We plan to implement:
 
 - 3.1.1 Image resizing
 - 3.1.2 Image file size reduction
 - 3.2.3 Split landscape photo into 1080 x 1080 Instagram resolution
-- 3.1.4 Image filetype conversion betwenn png/jpeg
+- 3.1.4 Image filetype conversion between png/jpeg
 - 3.1.5 Converting Images to low poly
 - 3.1.6 Converting images to pixelart
 - 3.1.7 Memetext insertion
 - 3.1.8 Image up & down scaling
+- 3.1.9 Upload image file
+- 3.1.10 Download image file(s)
 
 For each of the use cases the user has to upload an image of his choice.
 
 #### 3.1.1 Image resizing
 
-With this feature, a user can change the resolution of a given image. Two input fields, for height and width, define the target resolution. After these are filled in, a frame, representing the entered values, will be displayed on top of the upladed image. By positioning this frame, the user has the ability to adjust which area will be the output, as a change of the resolution might require image parts to be cut off as a consequence of a changed aspect ratio. Finally, the inputs are confirmed by the user and the processed image is offerd as a download.
+With this feature, a user can change the resolution of a given image. Two input fields, for height and width, define the target resolution. After these are filled in, a frame, representing the entered values, will be displayed on top of the upladed image. By positioning this frame, the user has the ability to adjust which area will be the output, as a change of the resolution might require image parts to be cut off as a consequence of a changed aspect ratio. Finally, the inputs are confirmed by the user and the processed image is offered as a download.
 
 #### 3.1.2 Image file size reduction
 
-To fit with the file size requirements on diffrent occations when it comes to uploading images, we offer this feature by making use of lossy file compression. The user adjustes a slider in between the values of zero and one hundred. The provided value is the target file size in percent relative to the original file size. The user confirms the selected percentage. Then the processed image is offered as a download.
+To fit with the file size requirements on different occations when it comes to uploading images, we offer this feature by making use of lossy file compression. The user adjustes a slider in between the values of zero and one hundred. The provided value is the target file size in percent relative to the original file size. The user confirms the selected percentage. Then the processed image is offered as a download.
 
 #### 3.2.3 Split landscape photo into 1080 x 1080 Instagram resolution
 
@@ -172,7 +174,7 @@ Then the width is divided by 1080. After the outcome is rounded, the calculated 
 
 After the image is processed, the tailored images are zippped and the archive is offered as a download.
 
-#### 3.1.4 Image filetype conversion betwenn png/jpeg
+#### 3.1.4 Image filetype conversion between png/jpeg
 
 `PNG` and `JPEG` are both very popular image formats. However, some platforms only support `JPEG` or only `PNG`.
 To enable the users an easy conversion between these to formats, the feature implements the functionality to convert a `JPEG` file to a `PNG` file or vice versa. After the conversion took place, the processed file is offered as a download.
@@ -183,7 +185,7 @@ This feature converts an image to low poly art. The user can enter the effect in
 
 #### 3.1.6 Converting images to pixelart
 
-Similar to point 3.1.5, the user enters the effect intensity. The backend processes the input and the user is presented a live preview. After the user decited for a certain setting, he/she/it confirms by clicking a button. The processed image is offerd as a download.
+Similar to point 3.1.5, the user enters the effect intensity. The backend processes the input and the user is presented a live preview. After the user decided for a certain setting, he/she/it confirms by clicking a button. The processed image is offered as a download.
 
 #### 3.1.7 Memetext insertion
 
@@ -195,6 +197,15 @@ Sometimes, you only have an image with a low resolution but you have to use it o
 
 However, it might not be implemented. We'll decide to a later point in time whether we want to include it in our product or not.
 
+#### 3.1.9 Upload image file
+
+Before you are able to manipulate any kind of file (in this case an image), you have to specify it.
+Therefore, the user has to select the corresponding image and upload it to the server. Furthermore, the system has to check if the uploaded file extension is supported (e.g. _.png_, _.jpg_).
+
+#### 3.1.10 Download image file(s)
+
+After having manipulated the image, the user might want to save it to their machine. That is why it is required to allow the user to download the according file(s). The user may choose the desired file format (_.png_ or _.jpg_, for example).
+
 ### 3.2 Usability
 
 We plan on designing the user interface as intuitive and self explanatory to make the user feel as comfortable as possible using the app either on mobile or desktop devices. Though tooltips will be available in the user interface, the description of all tuneable parameters should be self explanatory.
@@ -205,7 +216,7 @@ As our application is planned as webapp, no local installation is needed. After 
 
 #### 3.2.2 Tidy and minimalistic design
 
-We want to implement our app with a tidy and minimalistic design. This way the user is able to interact in familiar ways with the app with only minimal prior knowledge of the applicaton.
+We want to implement our app with a tidy and minimalistic design. This way the user is able to interact in familiar ways with the app with only minimal prior knowledge of the application.
 
 ### 3.3 Reliability
 
@@ -217,7 +228,7 @@ The server shall be available 99% of the time. Downtimes are only expected, whil
 
 As we are not persisting any data beyond the definition of the functionalities, we should not experience any loss of data.
 
-### 3.4 Perfomance
+### 3.4 performance
 
 #### 3.4.1 Capacity
 
@@ -227,7 +238,7 @@ Because all functions are executed by the server, more users require more server
 
 As we are not persisting any data beyond the definition of the functionalities, there is no need for storage capacity.
 
-#### 3.4.3 App perfomance / Response time
+#### 3.4.3 App performance / Response time
 
 The response time depends on the requested function. Some functionalities require more time-intensive calculations than others. The response time also rises with the size of the images. We aim to keep the response time as low as possible but also provide the user information on the current progress (e.g. estimated time). This will make the user experience much better.
 
@@ -235,7 +246,7 @@ The response time depends on the requested function. Some functionalities requir
 
 #### 3.5.1 Coding Standards
 
-We are going to write the code by using all of the most common clean code standards. For example we will name our variables and methods by their functionalities. This will keep the code easy to read by everyone and make further developement much easier.
+We are going to write the code by using all of the most common clean code standards. For example we will name our variables and methods by their functionalities. This will keep the code easy to read by everyone and make further development much easier.
 
 #### 3.5.2 Testing Strategy
 
