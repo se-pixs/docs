@@ -1,4 +1,4 @@
-# 1 Use-Case Name
+# 1 Upload image
 
 Uploading an image
 
