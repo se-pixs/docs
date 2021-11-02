@@ -6,16 +6,15 @@ Given('image is in format {word}', function (format) {
 });
 
 When('user drags image in into input field', function () {
-    this.actualAnswer = isItPNG(this.format);
+    this.actualAnswer = isItPNGOrJPEG(this.format);
 });
 
 Then('user should see a {string}', function (expectedAnswer) {
     assert.strictEqual(this.actualAnswer, expectedAnswer);
 });
 
-function isItPNG(format) {
-    // insert logic here
-    if (format === 'PNG') {
+function isItPNGOrJPEG(format) {
+    if (format === 'PNG' || format === 'JPEG') {
         return 'progress bar';
     } else {
         return 'warning popup';
