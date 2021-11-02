@@ -1,0 +1,15 @@
+{
+  "name": "narratives",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "keywords": [],
+  "author": "cuvar <info@cuvar.dev>",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.0.0-rc.1"
+  }
+}
