@@ -5,17 +5,17 @@ Given('image is in format {word}', function (format) {
     this.format = format;
 });
 
-Given('images has successfully been converted to low poly art'), function () {
+Given('image has successfully been converted to low poly art', function () {
     this.success = true;
-}
+});
 
-Given('images has not successfully been converted to low poly art'), function () {
-    this.success = true;
-}
+Given('image has not successfully been converted to low poly art', function () {
+    this.success = false;
+});
 
-When('user chooses action convert to low poly art'), function () {
-    this.actualAnswer = "";
-}
+When('user chooses action convert to low poly art', function () {
+    this.actualAnswer = isSuccessful(this.success);
+});
 
 When('user drags image in into input field', function () {
     this.actualAnswer = isItPNGOrJPEG(this.format);
