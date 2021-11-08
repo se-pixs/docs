@@ -8,8 +8,8 @@ Feature: Upload image successfully?
     
     Examples: Image format
       | validFormat |
-      | PNG    |
-      | JPEG   |
+      | PNG         |
+      | JPEG        |
   
   Scenario: Image has invalid file format
     Given image is in format <invalidFormat>
